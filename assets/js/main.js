@@ -45,7 +45,7 @@ const sendEmail = (e) =>{
 
     emailjs.sendForm(serviceID, templateID,'#contact-form', publicKey)
     .then(() => {
-        contactMess.textContent = 'Message sent successfully ✅'
+        contactMess.textContent = 'Lời nhắn đã được gửi đi ✅'
 
         setTimeout(() => {
             contactMess.textContent = '' 
@@ -53,7 +53,7 @@ const sendEmail = (e) =>{
 
         contactForm.reset()
     }, () => {
-        contactMess.textContent = 'Message not sent (service error) ❌'
+        contactMess.textContent = 'Lời nhắn chưa được gửi đi (Lỗi dịch vụ)! ❌'
     })
 }
 
